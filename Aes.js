@@ -19,7 +19,7 @@ function decryptText() {
         var decryptedText = decrypted.toString(CryptoJS.enc.Utf8);
 
         if (!decryptedText) {
-            document.querySelector('.kolomOutput').value = "Teks tidak dapat didekripsi dengan kunci yang diberikan. Teks asli: ";
+            document.querySelector('.kolomOutput').value = "Teks tidak dapat didekripsi dengan kunci yang diberikan.";
         } else {
             document.querySelector('.kolomOutput').value = decryptedText;
         }
