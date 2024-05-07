@@ -17,14 +17,17 @@ function decryptText() {
         var secretKey = document.querySelector('.kolomKey').value;
         var decrypted = CryptoJS.AES.decrypt(encryptedText, secretKey);
         var decryptedText = decrypted.toString(CryptoJS.enc.Utf8);
+
         if (!decryptedText) {
-            throw new Error("Kunci yang dimasukkan salah atau teks yang dienkripsi tidak valid.");
+            document.querySelector('.kolomOutput').value = "Teks tidak dapat didekripsi dengan kunci yang diberikan. Teks asli: ";
+        } else {
+            document.querySelector('.kolomOutput').value = decryptedText;
         }
-        document.querySelector('.kolomOutput').value = decryptedText;
     } catch (error) {
-        alert('Error saat deskripsi: ' + error.message);
+        document.querySelector('.kolomOutput').value = "Error saat deskripsi: " + error.message;
     }
 }
+
 
 // Event listener untuk tombol enkripsi dan deskripsi
 document.addEventListener('DOMContentLoaded', function() {
