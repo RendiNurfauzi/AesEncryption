@@ -1,0 +1,316 @@
+
+
+.index.root {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #101010;
+  overflow: hidden;
+}
+
+.index.root::before {
+    content: '0101010 1101011 1010101 0101010 1101011 1010101 0101010 1101011 1010101 0101010 1101011 1010101 0101010 1101011 1010101';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, #101010, transparent),
+                repeating-linear-gradient(to bottom,
+                  #101010 0%, #101010 10%, rgba(0, 105, 0, 0.471) 10.5%, #101010 11%);
+    background-size: 100% 100%, 100% 2em;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: -0;
+    animation: matrix-rain 1s linear infinite;
+}
+
+@keyframes matrix-rain {
+    0% { background-position: 0 0, 0 0; }
+    100% { background-position: 0 100%, 0 0; }
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-cursor {
+  from, to { border-color: transparent; }
+  50% { border-color: orange; }
+}
+
+.index .medium_title {
+  position: absolute;
+  top: 19px;
+  right: 17px;
+  width: 360px;
+  height: 30px;
+  font: 400 25px/1.2 "Montserrat Alternates", Helvetica, Arial, serif;
+  color: rgb(208, 0, 0);
+  letter-spacing: -1.1px;
+  overflow: hidden; /* Memastikan teks tidak keluar dari batas */
+  white-space: nowrap; /* Tidak ada baris baru */
+
+}
+@media (max-width: 991px) {
+  .index .medium_title {
+    align-items: flex-start;
+    font-size: 24px;
+  }
+}
+@media (max-width: 479px) {
+  .index .medium_title {
+    font-size: 20px;
+  }
+}
+.index .flex_col {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 53px 0px;
+  margin: 16px auto 14px;
+  width: 89.45%;
+  max-width: 1144.9500732422px;
+}
+@media (max-width: 383px) {
+  .index .flex_col {
+    gap: 50px 0px;
+  }
+}
+.index .flex_col1 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 23px 0px;
+  width: 956.9375px;
+  max-width: 85%;
+}
+.index .flex_col2 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px 0px;
+  margin: 0px 0px 0px 1px;
+}
+.index .flex_col3 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 9px 0px;
+}
+.index .flex_col4 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px 0px;
+}
+.index .flex_col5 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px 0px;
+  width: 221.0124969482px;
+  max-width: 85%;
+}
+.index .image {
+  position: relative;
+  width: 171.0124969482px;
+  max-width: 85%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  animation: color-blink-animation 5s linear infinite; /* Menambahkan animasi kedipan warna */
+}
+
+@keyframes color-blink-animation {
+  0%, 100% { filter: hue-rotate(0deg); } /* Warna asli */
+  50% { filter: hue-rotate(180deg); } /* Warna berubah 180 derajat */
+}
+.index .medium_title1 {
+  position: relative;
+  font: 400 25px/1.2 "Montserrat Alternates", Helvetica, Arial, serif;
+  color: rgb(204, 0, 0);
+  animation: color-blink-animation 5s linear infinite; /* Menambahkan animasi kedipan warna */
+  overflow: hidden; /* Memastikan teks tidak keluar dari batas */
+  white-space: nowrap; /* Tidak ada baris baru */
+  border-right: .15em solid orange; /* Cursor mengetik */
+  animation: typing 3.5s steps(40, end)forwards, blink-cursor 0.75s step-end infinite; /* Menambahkan infinite untuk looping */
+  display: inline-block; /* Atau 'block' tergantung pada kebutuhan layout */
+  text-align: center; /* Teks rata kiri dalam blok */
+  
+
+}
+@media (max-width: 991px) {
+  .index .medium_title1 {
+    align-items: flex-start;
+    font-size: 24px;
+  }
+}
+@media (max-width: 479px) {
+  .index .medium_title1 {
+    font-size: 20px;
+  }
+}
+.index .flex_col6 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px 0px;
+  width: 100%;
+}
+.index .medium_title4 {
+  position: relative;
+  font: 400 27px/1.22 "Montserrat Alternates", Helvetica, Arial, serif;
+  color: #00ff1a;
+  
+}
+@media (max-width: 991px) {
+  .index .medium_title4 {
+    align-items: flex-start;
+    font-size: 24px;
+  }
+}
+@media (max-width: 479px) {
+  .index .medium_title4 {
+    font-size: 22px;
+  }
+}
+.index .kolomInput {
+  position: relative;
+  width: 1250px; /* Memastikan lebar selalu mengisi container */
+  min-height: 135px; /* Tinggi khusus untuk input */
+  background-color: black;
+  border-radius: 15px 15px 15px 15px;
+  outline: 1px solid #00ff1a;
+  outline-offset: -1px;
+  color: white;
+  padding: 10px;
+  border: none;
+  resize: none; /* Menghilangkan fungsi resize untuk textarea */
+  box-sizing: border-box; /* Memastikan padding dan border termasuk dalam width */
+  font-family: 'Courier New', Courier, monospace; /* Font monospace */
+  font-size: 16px; /* Ukuran font, sesuaikan jika perlu */
+  
+}
+.index .flex_col7 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px 0px;
+}
+.index .medium_title3 {
+  position: relative;
+  font: 400 27px/1.22 "Montserrat Alternates", Helvetica, Arial, serif;
+  color: red;
+}
+@media (max-width: 991px) {
+  .index .medium_title3 {
+    align-items: flex-start;
+    font-size: 24px;
+  }
+}
+@media (max-width: 479px) {
+  .index .medium_title3 {
+    font-size: 22px;
+  }
+}
+.index .kolomOutput {
+  position: relative;
+  width: 1250px; /* Memastikan lebar selalu mengisi container */
+  min-height: 135px; /* Tinggi khusus untuk output */
+  background-color: black;
+  border-radius: 15px 15px 15px 15px;
+  outline: 1px solid red;
+  outline-offset: -1px;
+  color: white;
+  padding: 10px;
+  border: none;
+  resize: none; /* Menghilangkan fungsi resize untuk textarea */
+  box-sizing: border-box; /* Memastikan padding dan border termasuk dalam width */
+  font-family: 'Courier New', Courier, monospace; /* Font monospace */
+  font-size: 16px; /* Ukuran font, sesuaikan jika perlu */
+}
+.index .medium_title2 {
+  position: relative;
+  font: 400 27px/1.22 "Montserrat Alternates", Helvetica, Arial, serif;
+  color: #ffd600;
+}
+@media (max-width: 991px) {
+  .index .medium_title2 {
+    align-items: flex-start;
+    font-size: 24px;
+  }
+}
+@media (max-width: 479px) {
+  .index .medium_title2 {
+    font-size: 22px;
+  }
+}
+.index .kolomKey {
+  position: relative;
+  width: 1250px; /* Memastikan lebar selalu mengisi container */
+  min-height: 62px; /* Tinggi khusus untuk input key */
+  background-color: black;
+  border-radius: 15px 15px 15px 15px;
+  outline: 1px solid #ffd600;
+  outline-offset: -1px;
+  color: white;
+  padding: 10px;
+  border: none;
+  box-sizing: border-box; /* Memastikan padding dan border termasuk dalam width */
+  font-family: 'Courier New', Courier, monospace; /* Font monospace */
+  font-size: 16px; /* Ukuran font, sesuaikan jika perlu */
+}
+.index .flex_row {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 0px 10px;
+  margin: 0px 1px 0px 0px;
+}
+@media (max-width: 991px) {
+  .index .flex_row {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px 10px;
+  }
+}
+.index .btn {
+  position: relative;
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+  min-width: 308px;
+  font: 400 25px/1.2 "Montserrat Alternates", Helvetica, Arial, serif;
+  color: red;
+  text-align: center;
+  background-color: black;
+  border-radius: 15px 15px 15px 15px;
+  padding: 21px 8px 21px 8px;
+  outline: 1px solid red;
+  outline-offset: -1px;
+}
+.index .btn:hover {
+  background-color: red; /* Mengubah warna latar saat di-hover */
+  color: black; /* Mengubah warna teks saat di-hover */
+}
+.index .btn:active {
+  animation: blink-animation 0.5s steps(2, start) infinite;
+}
+@keyframes blink-animation {
+  50% { background-color: yellow; color: black; } /* Warna berubah di tengah animasi */
+  100% { background-color: red; color: black; } /* Kembali ke warna hover */
+}
+@media (max-width: 991px) {
+  .index .btn {
+    margin-top: unset;
+    margin-bottom: unset;
+    width: 100%;
+    min-width: unset;
+  }
+}
